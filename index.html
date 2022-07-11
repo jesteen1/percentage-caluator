@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>percentage caluatar</title>
+<link rel="stylesheet" type="text/css" href="./tailwind.css">
+</head>
+<body>
+<p class="text-3xl text-gray-600 bg-purple-50 px-2 py-3 pb-3 text-center">simple web percentage </p>
+<div class="text-2xl bg-red-300 px-3 py-3  ">
+<p class="text-2xl text-center font-bold">percentage calualtor</p>
+<br>
+
+	<div class="text-white border p-5  ">
+	<div class="bg-blue-500 py-2 px-3  flex flex-wrap text-white rounded w-full lg:w-1/2  py-4">
+		<p class="lg:text-left md:text-center">percentage:</p>
+	<input type="number" class="focus:outline-none lg:w-1/2 w-full text-black min-w-fit  text-center" validity="true name="percentage" id="percentage">
+	</div>
+	<br>
+	<div class="bg-blue-500 py-2 px-3  flex flex-wrap text-white rounded w-full lg:w-1/2  py-4">
+		<p class="lg:text-left md:text-center">amount :</p>
+<input type="number" class="focus:outline-none  lg:w-1/2  w-full text-black  text-center" validity="true" name="amount" id="amount">
+	</div>
+	<br>
+	<button id="btn" class="bg-yellow-500 p-5 mb-5 focus:outline-none rounded">submit</button>
+	<br>
+	<div class="bg-blue-500 py-2 px-3  flex text-white w-full rounded lg:w-1/2  py-4">
+		<p>result :</p>
+	<p class="text-2xl animate-bounce" id="result"></p>
+	</div>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+	let result=document.getElementById('result');
+	let percentage=document.getElementById('percentage');
+	let amount=document.getElementById('amount');
+    let btn=document.getElementById('btn');
+    btn.onclick=()=>{
+if(percentage.value=="" || percentage.value==null){
+    alert("please enter the percentage");
+    }
+    else{
+    	if (amount.value=="" || amount.value==null) {
+    		alert('please enter the amount');
+    	}
+    else{
+    	if(percentage.value<=100){
+    		 let getresult=percentage.value*amount.value/100;
+            result.innerHTML=getresult;
+    	}
+    		else{
+    			alert("percentage number must not 101 or more")
+    		}
+    }
+    	
+    	
+    }
+}
+</script>
+</body>
+</html>
